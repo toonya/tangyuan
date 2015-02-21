@@ -193,10 +193,8 @@ a:hover {
 .game-box .spoon-l.animated {
   left: 20%;
   top: 42%;
-  transition: .08s;
 }
 .game-box .spoon-r.animated {
   right: 20%;
   top: 42%;
-  transition: .08s;
 }
