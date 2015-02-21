@@ -60,7 +60,7 @@ $(function() {
 		var init = function(timer, target) {
 			timer = setTimeout(function(){
 				target.removeClass('animated');
-			}, 500)
+			}, 200)
 		}
 
 		setTimeout(function(){
