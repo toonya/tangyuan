@@ -1,0 +1,111 @@
+// ----------------------------------------
+// ! basic layout
+// ----------------------------------------
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+// ----------------------------------------
+// ! padding
+// ----------------------------------------
+
+@size-xs: 6px;
+@size-sm: 12px;
+@size-md: 24px;
+@size-lg: 48px;
+.pd-lr-xs {
+	padding: 0 @size-xs;
+}
+
+.pd-l-xs {
+	padding-left: @size-xs;
+}
+
+.pd-l-sm {
+     padding-left: @size-sm;
+}
+
+// ----------------------------------------
+// ! text
+// ----------------------------------------
+a:hover {
+	text-decoration: none;
+}
+
+.text-white {
+	color: #fff;
+}
+
+// ----------------------------------------
+// ! buttom
+// ----------------------------------------
+.btn-flat {
+	&.btn-black {
+		background: #000;
+		color: #fff;
+	}
+}
+
+// ----------------------------------------
+// ! border
+// ----------------------------------------
+
+.radius-0 {
+	border-radius: 0;
+}
+
+.border-non {
+	border:none;
+}
+
+// ----------------------------------------
+// ! helper block
+// ----------------------------------------
+.white-block-md {
+     height: @size-md;
+}
+.white-block-sm {
+     height: @size-sm;
+}
+.white-block-lg {
+     height: @size-lg;
+}
+.white-block-xs {
+     height: @size-xs;
+}
+
+// ----------------------------------------
+// ! transform
+// ----------------------------------------
+.skew-right(@deg: 30deg) {
+	transform: skewX(-@deg);
+}
+
+// ----------------------------------------
+// ! grid system
+// ----------------------------------------
+.row {
+	&.pd-xs {
+		margin-left: -@size-xs;
+		margin-right: -@size-xs;
+
+		>* {
+			padding-left: @size-xs;
+			padding-right: @size-xs;
+		}
+	}
+}
+
+// ----------------------------------------
+// ! mobile modal
+// ----------------------------------------
+.mb-modal {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background: rgba(0, 0, 0, 0.85);
+	top: 0;
+	left: 0;
+	z-index: 100;
+}

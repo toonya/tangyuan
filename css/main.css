@@ -1,0 +1,201 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.pd-lr-xs {
+  padding: 0 6px;
+}
+.pd-l-xs {
+  padding-left: 6px;
+}
+.pd-l-sm {
+  padding-left: 12px;
+}
+a:hover {
+  text-decoration: none;
+}
+.text-white {
+  color: #fff;
+}
+.btn-flat.btn-black {
+  background: #000;
+  color: #fff;
+}
+.radius-0 {
+  border-radius: 0;
+}
+.border-non {
+  border: none;
+}
+.white-block-md {
+  height: 24px;
+}
+.white-block-sm {
+  height: 12px;
+}
+.white-block-lg {
+  height: 48px;
+}
+.white-block-xs {
+  height: 6px;
+}
+.row.pd-xs {
+  margin-left: -6px;
+  margin-right: -6px;
+}
+.row.pd-xs > * {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.mb-modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.85);
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.page {
+  width: 100%;
+  min-height: 100%;
+  padding: 15px;
+  background: url(../img/bg.jpg);
+  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  position: relative;
+}
+.copyright {
+  margin-top: 48px;
+}
+.cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  position: absolute;
+}
+.phone .text-center p {
+  font-weight: bold;
+  font-size: 16px;
+}
+.home {
+  padding: 0;
+}
+.home a.cover {
+  background: url(../img/cover.jpg) no-repeat;
+}
+.home a.logo {
+  display: block;
+  width: 20%;
+  left: 24px;
+  top: 24px;
+  position: relative;
+}
+.rule {
+  padding: 0;
+}
+.rule .cover {
+  background: url(../img/rule-bg.jpg) no-repeat;
+}
+.rule .inner {
+  padding: 5%;
+}
+.rule .title {
+  background: #f9a127;
+  padding: 2px 6px;
+  font-size: 18px;
+  display: inline-block;
+  -webkit-transform: skewX(-15deg);
+      -ms-transform: skewX(-15deg);
+          transform: skewX(-15deg);
+}
+.charts {
+  padding-top: 10px;
+}
+.charts .charts-list {
+  position: relative;
+  padding-top: 119.5%;
+  background: url(../img/charts-bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.charts .charts-list .inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.charts .charts-list .players {
+  position: absolute;
+  height: 44%;
+  top: 40%;
+  width: 84.8%;
+  left: 8%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.charts .charts-list .players .row {
+  margin: 0;
+}
+.charts .charts-list .my-score {
+  position: absolute;
+  bottom: 6%;
+  width: 84.8%;
+  left: 8%;
+}
+.game-box {
+  position: relative;
+  padding-top: 139%;
+  background: url(../img/game-bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.game-box .ctr-l,
+.game-box .ctr-r {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: transparent;
+  top: 0;
+}
+.game-box .ctr-l {
+  left: 0;
+}
+.game-box .ctr-r {
+  right: 0;
+}
+.game-box .rb-fr {
+  position: absolute;
+  width: 61%;
+  left: 19.8%;
+  height: 9.5%;
+  top: 75%;
+  background: url(../img/rb-fr.png) no-repeat;
+  background-size: 100%;
+}
+.game-box .spoon-l,
+.game-box .spoon-r {
+  position: absolute;
+  width: 44%;
+  height: 20%;
+  top: 61.2%;
+  left: 0;
+  background-image: url(../img/spoon.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.game-box .spoon-r {
+  background-image: url(../img/spoon2.png);
+  right: 0;
+  left: auto;
+}
+.game-box .spoon-l.animated {
+  left: 20%;
+  top: 42%;
+  transition: .5s;
+}
+.game-box .spoon-r.animated {
+  right: 20%;
+  top: 42%;
+  transition: .5s;
+}

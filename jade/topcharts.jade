@@ -1,0 +1,59 @@
+extends inc/base
+
+block page
+	.page.charts
+		.mb-modal.hide
+			.container
+				.row
+					.col-xs-10.col-xs-offset-2
+						img.img-responsive(src="img/share.png")
+		.row
+			.col-xs-10.col-xs-offset-1
+				.row.pd-xs
+					mixin b3(url, text)
+						.col-xs-4
+							a.btn.btn-danger.btn-block(href=url)
+								span.text-white= text
+					mixin b2(url, text)
+						.col-xs-6
+							a.btn.btn-danger.btn-block(href=url)
+								span.text-white= text
+
+					+b3("index.html", "返回首页")
+					+b3("rule.html", "游戏规则")
+					+b3("topcharts.html", "英雄榜")
+				
+				.white-block-md
+				.row
+					.col-xs-4.col-xs-offset-4
+						img.img-responsive(src="img/logo.png")
+				
+				.white-block-sm
+
+				.charts-list
+					.inner
+						.players
+							mixin p
+								.row.pd-xs.text-center
+									.col-xs-3 张三
+									.col-xs-5 182****1234
+									.col-xs-4 50
+
+							+p
+							+p
+							+p
+							+p
+							+p
+							+p
+							+p
+							+p
+							+p
+						.my-score.text-center
+							.text-danger 我的汤圆: 2000 我的排名: 18
+
+				.white-block-lg
+				.row.pd-xs
+					+b2("game.html", "不服重来")
+					.col-xs-6
+						a.btn.btn-danger.btn-block(href="#", data-toggle=".mb-modal")
+							span.text-white 召唤小伙伴
