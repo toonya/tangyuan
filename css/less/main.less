@@ -58,6 +58,11 @@
 	}
 }
 
+.shared {
+	background-image: url(../img/cover-shared.jpg);
+	background-size: 100% 100%;
+}
+
 .rule {
 	padding: 0;
 	
@@ -177,5 +182,32 @@
 		right: 20%;
 		top: 42%;
 		// transition: .08s;
+	}
+}
+
+
+.shared {
+	.content {
+		position: absolute;
+		top: 45%;
+		left: 0;
+		width: 100%;
+
+		.slogan {
+			font-size: 18px;
+		}
+	}
+}
+
+// ----------------------------------------
+// ! rp
+// ----------------------------------------
+@media (max-width:360px) {
+	.btn {
+		font-size: 12px;
+	}
+
+	.btn-lg {
+		font-size: 16px;
 	}
 }

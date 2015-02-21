@@ -93,6 +93,10 @@ a:hover {
   top: 24px;
   position: relative;
 }
+.shared {
+  background-image: url(../img/cover-shared.jpg);
+  background-size: 100% 100%;
+}
 .rule {
   padding: 0;
 }
@@ -197,4 +201,21 @@ a:hover {
 .game-box .spoon-r.animated {
   right: 20%;
   top: 42%;
+}
+.shared .content {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+}
+.shared .content .slogan {
+  font-size: 18px;
+}
+@media (max-width: 360px) {
+  .btn {
+    font-size: 12px;
+  }
+  .btn-lg {
+    font-size: 16px;
+  }
 }
