@@ -22,11 +22,19 @@ block page
 					+b3("index.html", "返回首页")
 					+b3("rule.html", "游戏规则")
 					+b3("topcharts.html", "英雄榜")
-				
-		.game-box
+		.game-box(data-totle-time=15)
+			.score.hide 0
 			.spoon-l
 			.spoon-r
 			.rb-fr
 			.ctr-l
 			.ctr-r
 
+
+block lastjs
+	script.
+		$('.game-box').on('gameover', function(e, score){
+				$('.score').text(score)
+				// score = 得分
+				// alert(score);
+			})
