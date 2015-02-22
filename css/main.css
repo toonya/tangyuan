@@ -213,7 +213,7 @@ a:hover {
   position: absolute;
   width: 44%;
   height: 20%;
-  top: 61.2%;
+  top: 61%;
   left: 0;
   background-image: url(../img/spoon.png);
   background-size: 100%;
@@ -231,6 +231,50 @@ a:hover {
 .game-box .spoon-r.animated {
   right: 20%;
   top: 42%;
+}
+@-webkit-keyframes animation-left {
+  0%,
+  100% {
+    left: 0%;
+    top: 61%;
+  }
+  50% {
+    left: 20%;
+    top: 42%;
+  }
+}
+@keyframes animation-left {
+  0%,
+  100% {
+    left: 0%;
+    top: 61%;
+  }
+  50% {
+    left: 20%;
+    top: 42%;
+  }
+}
+@-webkit-keyframes animation-right {
+  0%,
+  100% {
+    right: 0%;
+    top: 61%;
+  }
+  50% {
+    right: 20%;
+    top: 42%;
+  }
+}
+@keyframes animation-right {
+  0%,
+  100% {
+    right: 0%;
+    top: 61%;
+  }
+  50% {
+    right: 20%;
+    top: 42%;
+  }
 }
 .shared .content {
   position: absolute;

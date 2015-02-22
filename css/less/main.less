@@ -183,7 +183,7 @@
 		position: absolute;
 		width: 44%;
 		height: 20%;
-		top: 61.2%;
+		top: 61%;
 		left: 0;
 		background-image: url(../img/spoon.png);
 		background-size: 100%;
@@ -200,15 +200,38 @@
 		left: 20%;
 		top: 42%;
 		// transition: .08s;
+		// animation: animation-left .1s steps(1, end);
 	}
 
 	.spoon-r.animated {
 		right: 20%;
 		top: 42%;
 		// transition: .08s;
+		// animation: animation-right .1s steps(1, end);
 	}
 }
 
+@keyframes animation-left {
+	0%, 100% {
+		left: 0%;
+		top: 61%;
+	}
+	50% {
+		left: 20%;
+		top: 42%;
+	}
+}
+
+@keyframes animation-right {
+	0%, 100% {
+		right: 0%;
+		top: 61%;
+	}
+	50% {
+		right: 20%;
+		top: 42%;
+	}
+}
 
 .shared {
 	.content {

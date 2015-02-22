@@ -51,32 +51,28 @@ $(function() {
 		})
 
 		$('.game-box .ctr-l').on('touchstart.CTY', function(){
-			$left.removeClass('animated');
-			clearTimeout(timeL);
-			$score.text(score++);
+			$left.addClass('animated');
+			$score.text(score++);	
 
 			setTimeout(function(){
-				$left.addClass('animated');
-				init(timeL, $left);
-			}, 50)
+				$left.removeClass('animated');
+			}, 100)
 		})
 
 		$('.game-box .ctr-r').on('touchstart.CTY', function(){
-			$right.removeClass('animated');
-			clearTimeout(timeR);
+			$right.addClass('animated');
 			$score.text(score++);
-
+			
 			setTimeout(function(){
-				$right.addClass('animated');
-				init(timeR, $right);
-			}, 50)
+				$right.removeClass('animated');
+			}, 100)
 		})
 
-		var init = function(timer, target) {
-			timer = setTimeout(function(){
-				target.removeClass('animated');
-			}, 50)
-		}
+		// var init = function(timer, target) {
+		// 	timer = setTimeout(function(){
+		// 		target.removeClass('animated');
+		// 	}, 50)
+		// }
 	}
 
 	eat();
