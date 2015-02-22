@@ -32,8 +32,23 @@ $(function() {
 		var $left = $('.spoon-l'),
 			$right = $('.spoon-r'),
 			$score = $('.score'),
+			t = $('.game-box').data('totleTime'),
 			score = 0,
 			timeL, timeR;
+
+		$('.progress .progress-bar')
+		.css({
+			'-webkit-animation-duration': t+'s',
+      		'animation-duration': t+'s',
+		})
+		.on('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(){
+			$('.game-box .ctr-l').off('touchstart.CTY');
+			$('.game-box .ctr-r').off('touchstart.CTY');
+			$left.removeClass('animated');
+			$right.removeClass('animated');
+
+			$('.game-box').trigger('gameover', score);
+		})
 
 		$('.game-box .ctr-l').on('touchstart.CTY', function(){
 			$left.removeClass('animated');
@@ -43,7 +58,7 @@ $(function() {
 			setTimeout(function(){
 				$left.addClass('animated');
 				init(timeL, $left);
-			}, 100)
+			}, 50)
 		})
 
 		$('.game-box .ctr-r').on('touchstart.CTY', function(){
@@ -54,23 +69,14 @@ $(function() {
 			setTimeout(function(){
 				$right.addClass('animated');
 				init(timeR, $right);
-			}, 100)
+			}, 50)
 		})
 
 		var init = function(timer, target) {
 			timer = setTimeout(function(){
 				target.removeClass('animated');
-			}, 100)
+			}, 50)
 		}
-
-		setTimeout(function(){
-			$('.game-box .ctr-l').off('touchstart.CTY');
-			$('.game-box .ctr-r').off('touchstart.CTY');
-			$left.removeClass('animated');
-			$right.removeClass('animated');
-
-			$('.game-box').trigger('gameover', score);
-		}, $('.game-box').data('totleTime')*1000)
 	}
 
 	eat();

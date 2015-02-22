@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-        <div class="page charts">
+        <div class="page game">
             <div class="mb-modal hide">
                 <div class="container">
                     <div class="row">
@@ -39,26 +39,77 @@
                             </a>
                         </div>
                     </div>
+                    <div class="white-block-sm"></div>
+                    <div class="row pd-xs">
+                        <div class="col-xs-4">
+                            <small class="text-danger">剩余时间:</small>
+                        </div>
+                        <div class="col-xs-8">
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                    <span class="sr-only">60% Complete</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pd-xs">
+                        <div class="col-xs-4">
+                            <small class="text-danger">已吃汤圆:</small>
+                        </div>
+                        <div class="col-xs-8">
+                            <small>
+                                <span class="score">0</span>
+                                <span class="text-danger">个</span>
+                            </small>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div data-totle-time='15' class="game-box">
-                <div class="score hide">0</div>
-                <div class="spoon-l"></div>
-                <div class="spoon-r"></div>
-                <div class="rb-fr"></div>
-                <div class="ctr-l"></div>
-                <div class="ctr-r"></div>
+            <div class="white-block-md"></div>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div data-totle-time='15' class="game-box">
+                        <div class="spoon-l"></div>
+                        <div class="spoon-r"></div>
+                        <div class="rb-fr"></div>
+                        <div class="ctr-l"></div>
+                        <div class="ctr-r"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <script src="js/vendor/jquery-1.11.1.min.js"></script>
+        <script src="js/TweenMax.min.js"></script>
         <script src="js/main.js"></script>
         <script>
         $('.game-box').on('gameover', function(e, score)
         {
-            $('.score').text(score)
-                // score = 得分
-            alert("得分: " + score);
+            // $('.score').text(score)
+            // score = 得分
+            // alert("得分: " + score);
+            var id = "{lanrain:$id}";
+            var token = "{lanrain:$token}";
+            $.ajax(
+            {
+                type: "POST",
+                url: "{lanrain::U('submitscore')}",
+                data:
+                {
+                    score: score,
+                    id: id,
+                    token: token
+                },
+                dataType: "json",
+                success: function(data)
+                {
+                    if (data.code == 1)
+                    {
+                        window.location.href = data.url;
+                    }
+                }
+            });
         })
         </script>
+        <script src="http://192.168.31.193:1337/livereload.js"></script>
     </body>
 </html>

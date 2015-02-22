@@ -123,6 +123,30 @@
 	}
 }
 
+
+.game {
+	.progress{
+		border-radius: 0;
+		height: 14px;
+		margin: 2px 0 4px;
+	}
+	.progress-bar {
+		background-color: #D9534F;
+		animation-name: state;
+		animation-timing-function: linear;
+		animation-fill-mode: forwards;
+	}
+}
+
+@keyframes state {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
 .game-box {
 	position: relative;
 	padding-top: 139%;

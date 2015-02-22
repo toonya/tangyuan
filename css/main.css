@@ -149,6 +149,36 @@ a:hover {
   width: 84.8%;
   left: 8%;
 }
+.game .progress {
+  border-radius: 0;
+  height: 14px;
+  margin: 2px 0 4px;
+}
+.game .progress-bar {
+  background-color: #D9534F;
+  -webkit-animation-name: state;
+          animation-name: state;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+@-webkit-keyframes state {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes state {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 .game-box {
   position: relative;
   padding-top: 139%;
