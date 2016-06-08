@@ -12,6 +12,12 @@ body {
 .pd-l-sm {
   padding-left: 12px;
 }
+.pd-r-sm {
+  padding-right: 12px;
+}
+.pd-r-xs {
+  padding-right: 6px;
+}
 a:hover {
   text-decoration: none;
 }
@@ -47,6 +53,17 @@ a:hover {
 .row.pd-xs > * {
   padding-left: 6px;
   padding-right: 6px;
+}
+.row.pr-xs {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.pr-xs > * {
+  padding-right: 6px;
+  padding-left: 0;
+}
+.row.pr-xs > *:nth-last-child(1) {
+  padding-right: 0;
 }
 .mb-modal {
   width: 100%;
@@ -123,6 +140,7 @@ a:hover {
   padding-top: 119.5%;
   background: url(../img/charts-bg.png) no-repeat;
   background-size: 100% 100%;
+  font-size: 12px;
 }
 .charts .charts-list .inner {
   position: absolute;

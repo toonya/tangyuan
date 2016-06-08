@@ -23,6 +23,21 @@ $(function() {
 	})
 
 	// ----------------------------------------
+	// ! form validate
+	// ----------------------------------------
+	$(document).on('submit', 'form', function(e){
+		var pattern = $(this).find('[pattern]'),
+			invalid = $(this).find('[pattern]:invalid').not('[dataCancelValid]');
+
+		if( pattern.val() == "" || invalid.size() > 0 ) {
+			e.preventDefault();
+
+			pattern.siblings('.text-danger').removeClass("hide");
+			invalid.siblings('.text-danger').removeClass("hide");
+		}
+	})
+
+	// ----------------------------------------
 	// ! eat
 	// ----------------------------------------
 	var eat = function() {

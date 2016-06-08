@@ -26,6 +26,14 @@ html, body {
      padding-left: @size-sm;
 }
 
+.pd-r-sm {
+	padding-right: @size-sm;
+}
+
+.pd-r-xs {
+	padding-right: @size-xs;
+}
+
 // ----------------------------------------
 // ! text
 // ----------------------------------------
@@ -93,6 +101,20 @@ a:hover {
 		>* {
 			padding-left: @size-xs;
 			padding-right: @size-xs;
+		}
+	}
+
+	&.pr-xs {
+		margin-right: 0;
+		margin-left: 0;
+
+		>* {
+			padding-right: @size-xs;
+			padding-left: 0;
+			
+			&:nth-last-child(1) {
+				padding-right: 0;
+			}
 		}
 	}
 }
