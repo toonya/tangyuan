@@ -174,12 +174,16 @@ a:hover {
 }
 .game .progress-bar {
   background-color: #D9534F;
-  -webkit-animation-name: state;
-          animation-name: state;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+}
+.game .progress-bar.animated {
+    -webkit-animation-name: state;
+            animation-name: state;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-duration: 15s;
+            animation-duration: 15s;
 }
 @-webkit-keyframes state {
   0% {
@@ -233,12 +237,12 @@ a:hover {
   height: 20%;
   top: 61%;
   left: 0;
-  background-image: url(../img/spoon.png);
+  background-image: url(../img/crab.png);
   background-size: 100%;
   background-repeat: no-repeat;
 }
 .game-box .spoon-r {
-  background-image: url(../img/spoon2.png);
+  background-image: url(../img/shrimp.png);
   right: 0;
   left: auto;
 }
@@ -249,6 +253,39 @@ a:hover {
 .game-box .spoon-r.animated {
   right: 20%;
   top: 42%;
+}
+.game-box .center-obj {
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    top: 30%;
+    left: 35%;
+    overflow: hidden;
+}
+.game-box .center-obj>div {
+    position: absolute;
+    width: 100%;
+    padding-top: 200%;
+    top: 100%;
+    left: 0;
+    background-size: 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.game-box .center-obj .animated {
+    top: 0;
+    transition: .1s ease-out;
+}
+
+.game-box .center-obj .fish {
+    background-image: url(../img/fish.png);
+}
+.game-box .center-obj .crab {
+    background-image: url(../img/crab.png);
+}
+.game-box .center-obj .shrimp {
+    background-image: url(../img/shrimp.png);
 }
 @-webkit-keyframes animation-left {
   0%,
